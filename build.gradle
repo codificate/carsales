@@ -1,0 +1,39 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    ext.kotlin_version = '1.3.21'
+    ext.room_version = '2.1.0-alpha04'
+    ext.lifecycle_version = '2.0.0'
+    ext.kodein_version = '5.2.0'
+    ext.retrofit_version = '2.4.0'
+    ext.navigation_version = '1.0.0-rc01'
+    ext.base_url = '\"https://retail-api.prd.latam.csnglobal.net/\"'
+    ext.lista_anuncios = '\"chileautos/v1/stock/listing\"'
+    ext.guardar_elemento = '\"chileautos/v1/saveditem/{id}\"'
+    ext.authorization = '\"Bearer eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6ImQxNjJmYjk0LWY2MTgtNWM4OC1jYzQwLTRhYzRiZTBiM2U1YSIsIm5hbWVpZCI6ImQxNjJmYjk0LWY2MTgtNWM4OC1jYzQwLTRhYzRiZTBiM2U1YSIsIkVtYWlsIjoic2FyYS52aWxsYXJyZWFsQGNhcnNhbGVzLmNvbSIsIk1lbWJlclN0YXR1cyI6IkFjdGl2ZSIsIlN0b3BBc2tpbmdGb3JFbWFpbCI6IkZhbHNlIiwiRW1haWxDb25maXJtZWQiOiJUcnVlIiwiRmlyc3ROYW1lIjoiU2FyYSBWaWxsYXJyZWFsIiwidHJhY2tpbmdpZCI6IjhiNzQzY2EzLWUzYWItNDI2ZS1hZGNlLTdkYzIyOTI1ZmNiZCIsIm5iZiI6MTU1MTI4OTg0NiwiZXhwIjoxNTUxMjkzNDQ2LCJpc3MiOiJtZW1iZXIubGF0YW0uY3NuZ2xvYmFsLm5ldCJ9.OOGWQjX8SZ3skQMvJGLlPkGZDq4OpHXQqZHqkhsMa818jE--PCvTRd8rz0XbtswAs1HULazio6wj4q6Q7szaA7LRTmPXNkpcEg-KNl_JAqkEheOgu2Rc5ra4rS2NilPbrl03qPcvPU3iJ5S0IPH-n7xlAkdJ-8ojuO8enN-xsbQV9Ptmp1pnij3gHvpo0ihIzgYFY-NlHY3T9CYmn8EPNrxyoVXLp6Ve6_Ovh2picTrsfoAFMHfouEMCC3bT3DlRLwrYyMPpo4m4AEwANcoj2m1RZfqoTekfnWUQYPAVZKXiwQ6M_7TIhSm2U9J99qT_dwyGEpWfCgkRBxMVC7IULA\"'
+    repositories {
+        google()
+        jcenter()
+        maven { url 'https://dl.bintray.com/kotlin/kotlin-eap' }
+        
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.3.1'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath 'android.arch.navigation:navigation-safe-args-gradle-plugin:1.0.0-rc01'
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven { url 'https://dl.bintray.com/kotlin/kotlin-eap' }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

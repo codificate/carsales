@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">carsales</string>
+    <string name="car_post_list_fragment">Resultados</string>
+    <string name="img_key_detail_content_description">keyDetails</string>
+</resources>
