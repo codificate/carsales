@@ -1,6 +1,9 @@
-package com.chileautos.carsales.ui
+package com.chileautos.carsales.ui.activity
 
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
@@ -21,5 +24,23 @@ class MainActivity : AppCompatActivity(), KodeinAware {
         setSupportActionBar(toolbar)
 
         navController = Navigation.findNavController(this, R.id.nav_host_fragment)
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.main_menu, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+
+        val id = item?.itemId
+
+        when(id){
+            R.id.sortItems -> Toast.makeText(this, getString(R.string.sort_button), Toast.LENGTH_SHORT).show()
+            R.id.favoriteItems -> Toast.makeText(this, getString(R.string.fav_button), Toast.LENGTH_SHORT).show()
+            else -> {}
+        }
+
+        return super.onOptionsItemSelected(item)
     }
 }

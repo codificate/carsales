@@ -7,7 +7,7 @@ import com.chileautos.carsales.data.network.CarPostNetworkDataSourceImpl
 import com.chileautos.carsales.data.network.ChileAutosApiService
 import com.chileautos.carsales.data.repository.CarSalesRepository
 import com.chileautos.carsales.data.repository.CarSalesRepositoryImpl
-import com.chileautos.carsales.ui.posts.CarPostViewModelFactory
+import com.chileautos.carsales.ui.model.CarPostViewModelFactory
 import com.resocoder.forecastmvvm.data.network.ConnectivityInterceptor
 import com.resocoder.forecastmvvm.data.network.ConnectivityInterceptorImpl
 import org.kodein.di.Kodein

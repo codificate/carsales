@@ -1,4 +1,4 @@
-package com.chileautos.carsales.ui.posts
+package com.chileautos.carsales.ui.model
 
 import androidx.lifecycle.ViewModel
 import com.chileautos.carsales.data.repository.CarSalesRepository

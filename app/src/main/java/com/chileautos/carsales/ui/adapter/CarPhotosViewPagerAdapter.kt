@@ -1,4 +1,4 @@
-package com.chileautos.carsales.ui.posts
+package com.chileautos.carsales.ui.adapter
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -30,6 +30,10 @@ class CarPhotosViewPagerAdapter(
 
         container.addView(view)
         return view
+    }
+
+    override fun destroyItem(collection: ViewGroup, position: Int, view: Any) {
+        collection.removeView(view as View)
     }
 
     private fun setImage(imageView: ImageView, position: Int) {

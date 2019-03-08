@@ -6,7 +6,7 @@
             app:startDestination="@id/carPostListFragment">
     <fragment
         android:id="@+id/carPostListFragment"
-        android:name="com.chileautos.carsales.ui.posts.CarPostListFragment"
+        android:name="com.chileautos.carsales.ui.fragment.CarPostListFragment"
         android:label="@string/car_post_list_fragment"
         tools:layout="@layout/car_post_list_fragment"/>
 

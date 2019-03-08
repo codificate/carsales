@@ -1,4 +1,4 @@
-package com.chileautos.carsales.ui.posts
+package com.chileautos.carsales.ui.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,6 +10,9 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.chileautos.carsales.R
 import com.chileautos.carsales.data.db.entity.CarPost
 import com.chileautos.carsales.ui.base.ScopedFragment
+import com.chileautos.carsales.ui.viewholder.CarPostItem
+import com.chileautos.carsales.ui.model.CarPostViewModel
+import com.chileautos.carsales.ui.model.CarPostViewModelFactory
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.ViewHolder
 import kotlinx.android.synthetic.main.car_post_list_fragment.*
@@ -46,6 +49,7 @@ class CarPostListFragment : ScopedFragment(), KodeinAware {
 
             group_loading.visibility = View.GONE
 
+            numberResults.text = posts.size.toString().plus(activity?.getString(R.string.car_post_list_fragment))
             initRecyclerView(posts.toCarPostItem())
 
         })

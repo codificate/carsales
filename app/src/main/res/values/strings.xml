@@ -1,5 +1,7 @@
 <resources>
-    <string name="app_name">carsales</string>
+    <string name="app_name">Carsales</string>
+    <string name="sort_button">Sort items</string>
+    <string name="fav_button">Favorite items</string>
     <string name="car_post_list_fragment">Resultados</string>
     <string name="img_key_detail_content_description">keyDetails</string>
 </resources>
